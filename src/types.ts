@@ -1,8 +1,21 @@
+export interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: string;
+  passwordHash?: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
 export interface Feature {
   id: string;
   title: string;
   description: string;
-  createdAt?: string;
+  iconUrl?: string | null;
+  order: number;
+  createdAt: string;
+  updatedAt: string;
 }
 
 export interface ContactSubmission {
@@ -10,12 +23,8 @@ export interface ContactSubmission {
   name: string;
   email: string;
   message: string;
-  createdAt?: string;
-}
-
-export interface User {
-  id: string;
-  email: string;
-  name?: string | null;
-  role: 'admin' | 'user';
+  source?: string | null;
+  status: string;
+  createdAt: string;
+  updatedAt: string;
 }
